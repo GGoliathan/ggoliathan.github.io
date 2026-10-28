@@ -1,11 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- Basic Page Needs -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Site</title>
+    <title>David's Personal Site</title>
+
 </head>
+
+<script>
+    const banner = document.querySelector('.head_banner');
+    const closeButton = document.querySelector('.banner_close');
+
+    window.addEventListener('scroll', () => {
+        banner.classList.toggle('hidden', window.scrollY > 50);
+    });
+
+    closeButton.addEventListener('click', () => {
+        banner.classList.add('hidden');
+    });
+</script>
+
 <body>
+
+    <!-- Header -->
+     <header id="home">
+        <nav id="nav-wrap">
+            <ul id="nav" class="nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul> <!-- End of nav -->
+
+            <div class="head_banner">
+                <div class="banner_context">
+                    <div class="banner_text">
+                        Thank you for visiting my website! Lets <a href="https://www.linkedin.com/in/dludemann2"
+                        target="_blank">connect</a> on LinkedIn
+                    </div>
+                    <button class="banner_close">
+                        <span class="material-icons">close</span>
+                    </button>
+
+                </div> <!-- End of banner_context  -->
+            </div>
+
+        </nav> <!-- end of nav-wrap -->
+
+            <!-- Hero Section -->
+        <div class="hero_container">
+            <img src="images/mountain_background.jpg" alt="Mount Everest" class="hero-image">
+            <div class="hero_text">
+                <h1>David Ludemann</h1>
+                <h3><span>Software Engineer |</span> <span>ML Engineer |</span> <span>Indie Game Developer</span></h3>
+                <hr />
+                <ul class="social">
+                    <li><a href="https://github.com/GGoliathan"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/dludemann2"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="mailto:davidludemann2@gmail.com"><i class="fab fa-envelope"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+     </header>
+
+
+
+
+
+
+
+
+     <div style="height: 1500px;"></div>
 
 </body>
 </html>
