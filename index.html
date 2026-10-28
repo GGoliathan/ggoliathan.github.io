@@ -16,19 +16,6 @@
 
 </head>
 
-<script>
-    const banner = document.querySelector('.head_banner');
-    const closeButton = document.querySelector('.banner_close');
-
-    window.addEventListener('scroll', () => {
-        banner.classList.toggle('hidden', window.scrollY > 50);
-    });
-
-    closeButton.addEventListener('click', () => {
-        banner.classList.add('hidden');
-    });
-</script>
-
 <body>
 
     <!-- Header -->
@@ -81,6 +68,20 @@
 
 
      <div style="height: 1500px;"></div>
+
+    <script>
+        const navWrap = document.getElementById('nav-wrap');
+        const banner = document.querySelector('.head_banner');
+        const closeButton = document.querySelector('.banner_close');
+
+        window.addEventListener('scroll', () => {
+            navWrap.classList.toggle('hidden', window.scrollY > 50);
+        });
+
+        closeButton.addEventListener('click', () => {
+            banner.classList.add('hidden');
+        });
+    </script>
 
 </body>
 </html>

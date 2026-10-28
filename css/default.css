@@ -9,16 +9,20 @@ header {
 }
 
 #nav-wrap {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 20;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#nav-wrap.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
 }
 
 #nav {
-    position: sticky;
-    top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -83,6 +87,10 @@ header {
     width: 100%;
     z-index: 20;
     padding: 0.5rem 15rem;
+}
+
+.head_banner.hidden {
+    display: none;
 }
 
 .hero_container {
